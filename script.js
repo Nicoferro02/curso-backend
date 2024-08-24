@@ -2,7 +2,7 @@
 
 function solicitarEdad (){
     let edad;
-    do{
+    do{ 
      edad = prompt("Decime tu edad")
         if(!edad || isNaN(edad) || parseInt(edad) <= 0 || parseInt(edad) >= 100){
             alert("Decime una edad valida, por favor")
@@ -103,7 +103,7 @@ function verificarEdad(){
     if(edad >= 18){
         alert("Sos mayor de EDAD, tienes acceso a la pagina")
 
-        let nombre = prompt("Decime tu nombre por favor")
+        let nombre = prompt("Como te llamas?")
 
         let apellido= prompt("Decime tu apellido")
         alert("Bienvenido " + nombre + " " + apellido + ", Empezemos a Armar la pc !")
