@@ -1,204 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/98d99e43f4.js" crossorigin="anonymous"></script> 
     <link rel="stylesheet" href="style.css">
     <title>UltraTech</title>
 </head>
+
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="img/file.png" alt=""></a>
+        <nav class="navbar">
+            <div>
+                <a href="index.html"><img class="logo" src="img/file.png" alt=""></a>
             </div>
-            
+
             <ul class="product">
                 <li><a href="#productos">PRODUCTOS</a></li>
                 <li><a href="">ARMA TU PC</a></li>
             </ul>
-                
+
             <div class="icons">
-                <a href="#user"><i class="fa-solid fa-user"></i></a>
+                <a id="open" href="#user"><i class="fa-solid fa-user"></i></a>
                 <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
-    </header>
 
-    <div class="fondo">
-        
-        <div class="content">
-            <span>x</span>
-            <H1>INICIAR SESION</H1>
+        <div class="fondo">
 
+            <div class="content">
+                <span id="close">x</span>
+                <H1>INICIAR SESION</H1>
+            </div>
 
         </div>
 
-    </div>
-    
+    </header>
+
     <!-- CARRUSEL -->
 
     <section class="carrusel">
-        <img src="img/165.png" alt="">
+        <img class="carru" src="img/165.png" alt="">
     </section>
 
     <!-- SECCION PRODUCTOS -->
 
     <section id="productos" class="conteiner-target">
-        <h1>Productos a Eleccion</h1>
-        
-        <div id="target">
-            <div class="card">
-                <img src="img/shopping.webp" alt="">
-                <div>
-                    <h2>MONITOR SAMSUNG 24'' 75hz</h2>
-                    <p>Precio: $120.000 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
+
+        <div>
+
+            <h1>Productos a Eleccion</h1>
+
+            <div class="conteiner-objetos">
+                <nav>
+                    <ul class="lista-objetos">
+                        <li>
+                            <a href="">Todos los Productos</a>
+                        </li>
+                        <li>
+                            <a href="">Procesadores <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul>
+                                <li><i><a href="">Intel</a></i></li>
+                                <li><i><a href="">Amd</a></i></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Placa Madre</a>
+                        </li>
+                        <li>
+                            <a href="">Refrigeracion <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul>
+                                <li><i><a href="">Cooler</a></i></li>
+                                <li><i><a href="">Refrigeracion Liquida</a></i></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Memorias <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul>
+                                <li><i><a href="">RAM</a></i></li>
+                                <li><i><a href="">SSD</a></i></li>
+                                <li><i><a href="">HDD</a></i></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Placas de Video <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul>
+                                <li><i><a href="">Radeon</a></i></li>
+                                <li><i><a href="">Nvidia</a></i></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Fuente de Alimentacion</a>
+                        </li>
+                           <li>
+                            <a href="">Gabinetes</a>
+                        </li>
+                        <li>
+                            <a href="">Perisfericos <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul>
+                                <li><i><a href="">Silas Gamer</a></i></li>
+                                <li><i><a href="">Mouse</a></i></li>
+                                <li><i><a href="">Teclado</a></i></li>
+                                <li><i><a href="">Auriculares</a></i></li>
+                                <li><i><a href="">Monitor</a></i></li>
+                                <li><i><a href="">Placa Wifi</a></i></li>
+                            </ul>
+                        </li>
+                     
+                    </ul>
+                </nav>
 
             </div>
-            <div class="card">
-                <img src="img/gabinete-solarmax-tg-c6-cooler-rgb-white-cm5920-0.jpg" alt="">
-                <div>
-                    <h2>GABINETE SOLARMAX TG C/6 COOLER</h2>
-                    <p>Precio: $70.000 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
+            
+
+            <div id="target">
+               <!-- Relleno con js  -->
             </div>
-            <div class="card">
-                <img src="img/micro-amd-ryzen-5-7600x-cvideo-scooler-am5-0.jpg" alt="">
-                <div>
-                    <h2>PROCESADOR RYZEN 5 7600X C/VIDEO</h2>
-                    <p>Precio: $327.200 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/memoria-16gb-ddr5-5600-kingston-fury-beast-rgb-0.jpg" alt="">
-                <div>
-                    <h2>MEMORIA 16GB DDR5 KINGSTON FURY RGB</h2>
-                    <p>Precio: $80.000 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/fuente-700w-evga-br-80-bronze-0.jpg" alt="">
-                <div>
-                    <h2>FUENTE 700W EVGA 80 PLUS BRONCE</h2>
-                    <p>Precio: $122.900 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/video-geforce-rtx-4060-ti-gigabyte-windforce-oc-8g-gddr6-0.jpg" alt="">
-                <div>
-                    <h2>PLACA DE VIDEO RTX 4060TI GIGABYTE</h2>
-                    <p>Precio: $617.400 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/mouse-logitech-g-pro-x-superlight-white-910005941-0.jpg" alt="">
-                <div>
-                    <h2>MOUSE LOGITECH G PRO X SUPERLIGHT WHITE</h2>
-                    <p>Precio: $123.200 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/mother-asus-prime-b650ma-wifi-ii-ddr5-am5-0.jpg" alt="">
-                <div>
-                    <h2>MOTHER ASUS B650MA WIFI AM5</h2>
-                    <p>Precio: $216.000 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/placa-wifi-pcie-tplink-archer-t6e-ac1300mb-dual-band-0.jpg" alt="">
-                <div>
-                    <h2>PLACA DE RED TP-LINK 1300MB</h2>
-                    <p>Precio: $76.340 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/cooler-fan-aerocool-eclipse-12-rgb-para-gabinete-0.jpg" alt="">
-                <div>
-                    <h2>COOLER FAN AEROCOOL RGB</h2>
-                    <p>Precio: $12.619 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/hd-ssd-1tb-kingston-snvs-nv2-m2-nvme-gen4-3500mbs-2280-0.jpg" alt="">
-                <div>
-                    <h2>MEMORIA SSD 1TB KINGSTON M.2</h2>
-                    <p>Precio: $92.350 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/compragamer_Imganen_general_37639_Teclado_Mecanico_Redragon_Horus_K621W_White_RGB_TKL_Low_Profile_Switch_Red_Wireless_1a510a9f-med.jpg" alt="">
-                <div>
-                    <h2>TECLADO REDRAGON HORUS TKL WIRELESS</h2>
-                    <p>Precio: $73.456 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/auricular-wireless-cmicrofono-logitech-vibe-100-white-9810-0.jpg" alt="">
-                <div>
-                    <h2>AURICULAR WIRELESS CON MICROFONO LOGITECH VIBE 100</h2>
-                    <p>Precio: $162.304 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/compragamer_Imganen_general_19144_Silla_Gamer_AK-Racing_Gaming_Chair_OCTANE_Red__Peso_MAX._150kg__17df5120-med.jpg" alt="">
-                <div>
-                    <h2>SILLA GAMER AK RACING GAMING CHAIR</h2>
-                    <p>Precio: $435.654 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-            <div class="card">
-                <img src="img/compragamer_Imganen_general_18900_Procesador_Intel_Core_i5_10400F_4.3GHz_Turbo_1200_Comet_Lake_e07a1d28-med.jpg" alt="">
-                <div>
-                    <h2>PROCESADOR INTEL CORE I5 10400F 4.3GHZ </h2>
-                    <p>Precio: $152.342 </p>
-                </div>
-                <button><i class="fa-solid fa-cart-shopping"></i>Añadir al Carrito</button>
-            </div>
-        </div>
-        
     </section>
 
-
-
-
-
-     <!-- Pie de pagina -->
-     <footer>
+    <!-- Pie de pagina -->
+    <footer>
         <div class="pie">
-            <p>© 2024 | Desarrollo Web hecho por el autor <a href="mailto:ferro.nicolas886@gmail.com">Ferro Nicolas</a></p>
+            <p>© 2024 | Desarrollo Web hecho por el autor <a href="mailto:ferro.nicolas886@gmail.com">Ferro Nicolas</a>
+            </p>
             <ul>
                 <li>
-                  <a href="https://www.facebook.com/nicolas.ferro.568/">
-                    <i class="fab fa-facebook-f icon"></i>    </a>
+                    <a href="https://www.facebook.com/nicolas.ferro.568/">
+                        <i class="fab fa-facebook-f icon"></i> </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/ferronicolas19/"><i class="fa-brands fa-instagram icon"></i></a>
+                    <a href="https://www.instagram.com/ferronicolas19/"><i class="fa-brands fa-instagram icon"></i></a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/nicolas-ferro-814571232/"><i class="fab fa-linkedin-in icon"></i></a></li>
+                    <a href="https://www.linkedin.com/in/nicolas-ferro-814571232/"><i class="fab fa-linkedin-in icon"></i></a>
+                </li>
                 <li>
-            </ul> 
-        </div>  
-       
+            </ul>
+        </div>
+
     </footer>
 
-
-<script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/98d99e43f4.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

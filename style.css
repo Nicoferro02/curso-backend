@@ -10,7 +10,7 @@
 
 
 /* Navbar */
-nav{
+.navbar{
     width: 100%;
     height: 100px;
     display: flex;
@@ -28,7 +28,7 @@ nav{
    margin: 30px;
 }
 
-nav ul li a{
+.navbar ul li a{
     text-decoration: none;
     color: black;
    
@@ -42,27 +42,26 @@ nav ul li a{
 }
 
 /* Logo */
-.logo a img{
-   width: 500px;
+.logo{
+   max-width: 500px;
    height: 500px;
 }
 
 /* FONDO */
 .fondo{
-  position:absolute;
+  position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0,0.3);
- transition: transform .5s ease height .2s ease;
- transform: scale(0)
+  background-color: rgb(0,0,0,0.5);
+  transform: scale(0);
 }
 .content{
-  width: 400px;
-  height: 440px;
-  backdrop-filter: blur(15px);
+  width: 440px;
+  height: 540px;
+  backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   overflow: hidden;
@@ -79,6 +78,7 @@ nav ul li a{
   z-index: 1;
   font-size: 30px;
   margin-right: 10px;
+  cursor: pointer;
  
 }
 
@@ -89,30 +89,61 @@ nav ul li a{
 /* Carrusel */
 .carrusel{
     padding-top: 100px;
+    line-height: 0;
 }
-img{
+.carru{
     width: 100%;
-    height: 700px;
+    height: 500px;
+    
 }
 
 /* Productos */
-
 .conteiner-target{
-    padding: 80px 200px;
-    background-color: gainsboro;
+  padding: 80px 150px;
+  background-color: gainsboro;
 }
 
 .conteiner-target h1{
-  font-size: 32px;
+font-size: 32px;
+}
+
+.conteiner-objetos{
+  margin-top: 1rem;
+  background-color: rgb(210, 209, 209);
+  padding: 10px;
+  width: 100%;
+}
+
+.lista-objetos{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.lista-objetos li {
+  list-style: none;
+}
+
+.lista-objetos li ul{
+  display: none;
+}
+
+.lista-objetos li a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.lista-objetos li i a {
+  font-size: 15px;
 }
 
 #target{
     margin-top: 30px;
     width: 100%;
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3,1fr);
+    display:flex;
+    flex-wrap: wrap;
     gap: 25px;
+    
 }
 
 .card{
@@ -139,16 +170,16 @@ img{
     margin-top:10px ;
     font-size: 18px;
 }
-button{
+.button-target{
     padding: 15px;
-    background-color: rgb(162, 219, 249);
+    background-color: rgb(213, 188, 253);
     border: none;
     border-radius: 8px;
     font-size: 15px;
     cursor: pointer;
 }
 
-button i{
+.button-target i{
     margin-right: 10px;
     font-size: 18px;
 }
@@ -191,7 +222,7 @@ footer {
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-    border: 1px solid #000;
+    box-shadow: 2px 2px 5px 0px #000;
     z-index: 1;
   }
   footer ul li a .icon {
