@@ -418,7 +418,7 @@ function reducirCarrito() {
 // Función de simulación de pago
 carritoPagado.addEventListener("click", () => {
     if (productosEnCarrito.length > 0) {
-        alert("Pago realizado con éxito. ¡Gracias por tu compra de !");
+        alert("Pago realizado con éxito. ¡Gracias por tu compra!");
         productosEnCarrito = [];
         localStorage.removeItem("productos-carrito-conteiner");
 
