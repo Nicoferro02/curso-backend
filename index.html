@@ -9,33 +9,73 @@
 </head>
 
 <body>
-    <header>
+    <header id="header"> 
         <nav class="navbar">
             <div>
-                <a href="index.html"><img class="logo" src="img/file.png" alt=""></a>
+                <a href="index.html" style="text-decoration: none;"><p class="logo">UltraTech</p></a>
             </div>
 
             <ul class="product">
                 <li><a href="#productos">PRODUCTOS</a></li>
                 <li><a href="">ARMA TU PC</a></li>
+               
             </ul>
 
             <div class="icons">
-                <a id="open" href="#user"><i class="fa-solid fa-user"></i></a>
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a id="open" class="icon-login"><i class="fa-solid fa-user" style="cursor:pointer;"></i></a>
+                <a id="abrirCarrito"><i class="fa-solid fa-cart-shopping " id="number">0</i></a>
             </div>
+            
         </nav>
 
-        <div class="fondo">
-
-            <div class="content">
-                <span id="close">x</span>
-                <H1>INICIAR SESION</H1>
-            </div>
-
+        <div class="cart">
+            <div class="carrito-conteiner">
+                <span id="closed" class="fa-solid fa-xmark borrar"></span>
+                <div class="titulo-carrito">
+                    <h1> Tu Carrito</h1>
+                </div>
+                <div>
+                    <h3 id="carrito-vacio">Tu carrito se encuentra vacio ☹️</h3>
+                </div>
+                <div class="productos-carrito-conteiner">
+                    <!-- Relleno con js -->
+                </div>
+               
+                <div id="carrito-acciones" class="pagar-carrito">
+                    <div>
+                        <h3>Tu total:</h3>
+                        <p id="total-carrito"></p>
+                    </div>
+                    <button id="carrito-pagado" class="button-cart" >Pagar<i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+            <div>
         </div>
 
     </header>
+
+    <div class="fondo" id="fondo">
+
+        <form class="content">
+            <span id="close" class="fa-solid fa-xmark borrar"></span>
+            <div class="content-session">
+                <i class="fa-solid fa-user login-user"></i>
+                <h3 class="sesion">Inicia Sesion</h3>
+            </div>
+            
+            <div class="content-input">
+                <input type="text" name="nombre" placeholder="Nombre" id="nombre" required pattern="[A-Za-zÀ-ÿ\s]+">
+                <input type="email" name="email" placeholder="Correo electronico" id="correo" required>
+                <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" maxlength="8" required>
+                <div class="content-password">
+                    <input type="checkbox" name="contraseña" id="check"><p>Mostrar Contraseña</p>
+                </div>
+                
+            </div>
+           
+            <input type="reset" class=" button-content" value="Enviar">
+        </form>
+
+    </div>
 
     <!-- CARRUSEL -->
 
@@ -51,59 +91,59 @@
 
             <h1>Productos a Eleccion</h1>
 
-            <div class="conteiner-objetos">
-                <nav>
+            <div >
+                <nav class="conteiner-objetos">
                     <ul class="lista-objetos">
                         <li>
-                            <a href="">Todos los Productos</a>
+                            <p id="todos" class="boton-categoria">Todos los Productos</p>
                         </li>
                         <li>
-                            <a href="">Procesadores <i class="fa-solid fa-chevron-down"></i></a>
-                            <ul>
-                                <li><i><a href="">Intel</a></i></li>
-                                <li><i><a href="">Amd</a></i></li>
+                            <p>Procesadores <i class="fa-solid fa-chevron-down" id="Procesadores"></i></p>
+                            <ul class="menu-vertical">
+                                <li><i><p class="boton-categoria" id="Intel">Intel</p></i></li>
+                                <li><i><p class="boton-categoria" id="AMD">Amd</p></i></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="">Placa Madre</a>
+                            <p id="Placa-Madre" class="boton-categoria">Placa Madre</p>
                         </li>
                         <li>
-                            <a href="">Refrigeracion <i class="fa-solid fa-chevron-down"></i></a>
-                            <ul>
-                                <li><i><a href="">Cooler</a></i></li>
-                                <li><i><a href="">Refrigeracion Liquida</a></i></li>
+                            <p  id="Refrigeracion">Refrigeracion <i class="fa-solid fa-chevron-down "></i></p>
+                            <ul class="menu-vertical">
+                                <li><i><p  class="boton-categoria" id="Cooler">Cooler</p></i></li>
+                                <li><i><p class="boton-categoria" id="Liquida">Refrigeracion Liquida</p></i></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="">Memorias <i class="fa-solid fa-chevron-down"></i></a>
-                            <ul>
-                                <li><i><a href="">RAM</a></i></li>
-                                <li><i><a href="">SSD</a></i></li>
-                                <li><i><a href="">HDD</a></i></li>
+                            <p>Memorias <i class="fa-solid fa-chevron-down boton-categoria"></i></p>
+                            <ul class="menu-vertical">
+                                <li><i><p class="boton-categoria" id="RAM">RAM</p></i></li>
+                                <li><i><p class="boton-categoria" id="SSD">SSD</p></i></li>
+                                <li><i><p class="boton-categoria" id="HDD">HDD</p></i></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="">Placas de Video <i class="fa-solid fa-chevron-down"></i></a>
-                            <ul>
-                                <li><i><a href="">Radeon</a></i></li>
-                                <li><i><a href="">Nvidia</a></i></li>
+                            <p>Placas de Video <i class="fa-solid fa-chevron-down "></i></p>
+                            <ul class="menu-vertical">
+                                <li><p id="Radeon" class="boton-categoria">Radeon</p></li>
+                                <li><p id="Nvidia" class="boton-categoria">Nvidia</p></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="">Fuente de Alimentacion</a>
+                            <p class="boton-categoria" id="Fuente">Fuente de Alimentacion</p>
                         </li>
                            <li>
-                            <a href="">Gabinetes</a>
+                            <p class="boton-categoria" id="Gabinetes">Gabinetes</p>
                         </li>
                         <li>
-                            <a href="">Perisfericos <i class="fa-solid fa-chevron-down"></i></a>
-                            <ul>
-                                <li><i><a href="">Silas Gamer</a></i></li>
-                                <li><i><a href="">Mouse</a></i></li>
-                                <li><i><a href="">Teclado</a></i></li>
-                                <li><i><a href="">Auriculares</a></i></li>
-                                <li><i><a href="">Monitor</a></i></li>
-                                <li><i><a href="">Placa Wifi</a></i></li>
+                            <p id="Perisfericos">Perisfericos<i class="fa-solid fa-chevron-down"></i><p> 
+                            <ul class="menu-vertical">
+                                <li><i><p class="boton-categoria"  id="Sillas">Silas Gamer</p></i></li>
+                                <li><i><p class="boton-categoria"  id="Mouse">Mouse</p></i></li>
+                                <li><i><p class="boton-categoria"  id="Teclado">Teclado</p></i></li>
+                                <li><i><p class="boton-categoria"  id="Auriculares">Auriculares</p></i></li>
+                                <li><i><p class="boton-categoria"  id="Monitor">Monitor</p></i></li>
+                                <li><i><p class="boton-categoria"  id="Placa-Wifi">Placa Wifi</p></i></li>
                             </ul>
                         </li>
                      
@@ -115,7 +155,7 @@
 
             <div id="target">
                <!-- Relleno con js  -->
-            </div>
+        </div>
     </section>
 
     <!-- Pie de pagina -->

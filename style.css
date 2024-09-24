@@ -8,17 +8,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 /* Navbar */
 .navbar{
     width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 20px;
     position:fixed;
     background-color: #fff;
+    z-index: 2;
 }
 .product{
   margin-right: 200px;
@@ -33,59 +33,124 @@
     color: black;
    
 }
-.icons {
-  margin-right: 150px;
-}
+
 .icons a i{
     margin: 10px;
     color: #000;
+    cursor: pointer;
 }
 
 /* Logo */
 .logo{
-   max-width: 500px;
-   height: 500px;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #c348f0;
+  
 }
 
 /* FONDO */
 .fondo{
-  position: fixed;
+  position:fixed;
   width: 100%;
   height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, background-color 0.5s ease-out;
+}
+
+.active{
+  visibility: visible;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0,0,0,0.5);
-  transform: scale(0);
+  background-color: rgba(0, 0, 0, 0.6);
 }
+
 .content{
   width: 440px;
   height: 540px;
-  backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(80px);
+  box-shadow: 2px 1px 15px 0px #fff;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
+  align-items:center;
   justify-content: center;
-  align-items: center;
+  gap: 15px;
+  transform: translateY(-150vh);
+  transition:transform 0.5s ease
 }
 
-.content span{
+ .borrar{
   position: absolute;
   top: 0;
   right: 0;
   color: white;
   z-index: 1;
   font-size: 30px;
-  margin-right: 10px;
+  margin: 20px 25px;
   cursor: pointer;
  
 }
 
-.content h1{
-  color: white;
+.content-session{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
 }
 
+.login-user{
+  font-size: 80px;
+  color: #eee7e7;
+}
+
+.sesion{
+  font-size: 25px;
+  color:#eee7e7;
+}
+
+.content-input{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  margin-left: 147px;
+}
+
+.content-input > input{
+  width: 65%;
+  padding: 5px;
+  color:#eee7e7;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff; 
+  outline: none;
+}
+.content-input > input::placeholder{
+  color:#eee7e7 ;
+}
+
+.button-content{
+  padding: 5px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(213, 188, 253) ;
+  font-size: 17px;
+  cursor: pointer;
+}
+.content-password{
+  display: flex;
+  gap:10px ;
+  color: #fff;
+}
 /* Carrusel */
 .carrusel{
     padding-top: 100px;
@@ -100,7 +165,7 @@
 /* Productos */
 .conteiner-target{
   padding: 80px 150px;
-  background-color: gainsboro;
+  background-color: #eee7e7;
 }
 
 .conteiner-target h1{
@@ -109,32 +174,38 @@ font-size: 32px;
 
 .conteiner-objetos{
   margin-top: 1rem;
+  max-width: 100%;
   background-color: rgb(210, 209, 209);
-  padding: 10px;
-  width: 100%;
+  box-shadow: 0px 0px 4px 0px black;
 }
 
-.lista-objetos{
+.lista-objetos {
   display: flex;
   justify-content: space-between;
   list-style: none;
 }
 .lista-objetos li {
   list-style: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
 }
 
-.lista-objetos li ul{
+.lista-objetos li:hover{
+  background-color:rgb(240, 230, 230) ;
+}
+
+.menu-vertical{
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background-color: rgb(210, 209, 209);
 }
 
-.lista-objetos li a{
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-
-.lista-objetos li i a {
-  font-size: 15px;
+.lista-objetos li:hover .menu-vertical{
+  display: block;
 }
 
 #target{
@@ -183,7 +254,128 @@ font-size: 32px;
     margin-right: 10px;
     font-size: 18px;
 }
+.button-target:hover{
+  background-color: rgb(229, 200, 250);
+}
 
+/* Carrito */
+
+
+.cart{
+  position: fixed;
+  right: 0;
+  right: -150%;
+  z-index: 3;
+  width: 500px;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+  backdrop-filter: blur(32px);
+  box-shadow: 0px 0px 35px 0px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.titulo-carrito{
+  margin-top: 3rem;
+  background-color:  rgb(210, 209, 209) ;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.carrito-vacio{
+  background-color: rgb(240, 230, 230) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.carrito-conteiner{ 
+ width: 80%;
+ max-height: 80%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-around;
+ border-radius: 10px;
+ background-color:  rgb(210, 209, 209);
+ 
+}
+
+.productos-carrito-conteiner{
+  width: 100%;
+  margin: 10px;
+  overflow:auto ;
+}
+.carrito-producto{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(240, 230, 230) ;
+  border: 2px solid  rgb(210, 209, 209);
+}
+
+
+.fa-solid{
+  cursor: pointer;
+}
+
+.carrito-cantidad{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.carrito-producto img{
+  width: 100px;
+}
+.carrito-delete{
+  border: none;
+  font-size: 15px
+}
+
+.pagar-carrito{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:  rgb(210, 209, 209);
+  padding: 10px;
+}
+.pagar-carrito div{
+  width: 100%;
+  padding: 10px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button-cart{
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  box-shadow: 0px 0px 20px 0px rgb(213, 188, 253);
+  border-radius: 5px;
+  background-color: rgb(213, 188, 253);
+  cursor: pointer;
+  font-size: 15px;
+}
+.button-cart:hover{
+  background-color: rgb(229, 200, 250)
+}
+
+.borrado{
+  display: none;
+}
 /* Footer */
 footer {
     width: 100%;
