@@ -292,6 +292,7 @@ const conteinerCarrito = document.querySelector(".productos-carrito-conteiner");
 const totalCarrito = document.querySelector("#total-carrito");
 
 let productosEnCarrito = JSON.parse(localStorage.getItem("productos-carrito-conteiner")) || [];
+actualizarNumber()
 
 function agregarAlCarrito() {
     const botonCarrito = document.querySelectorAll(".button-target");
