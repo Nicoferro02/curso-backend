@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="style.css">
     <title>UltraTech</title>
 </head>
@@ -25,7 +26,6 @@
                 <a id="open" class="icon-login"><i class="fa-solid fa-user" style="cursor:pointer;"></i></a>
                 <a id="abrirCarrito"><i class="fa-solid fa-cart-shopping " id="number">0</i></a>
             </div>
-            
         </nav>
 
         <div class="cart">
@@ -87,74 +87,143 @@
 
     <section id="productos" class="conteiner-target">
 
-        <div>
+        <div class="contenido-target">
 
             <h1>Productos a Eleccion</h1>
 
-            <div >
-                <nav class="conteiner-objetos">
-                    <ul class="lista-objetos">
-                        <li>
-                            <p id="todos" class="boton-categoria">Todos los Productos</p>
-                        </li>
-                        <li>
-                            <p>Procesadores <i class="fa-solid fa-chevron-down" id="Procesadores"></i></p>
-                            <ul class="menu-vertical">
-                                <li><i><p class="boton-categoria" id="Intel">Intel</p></i></li>
-                                <li><i><p class="boton-categoria" id="AMD">Amd</p></i></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p id="Placa-Madre" class="boton-categoria">Placa Madre</p>
-                        </li>
-                        <li>
-                            <p  id="Refrigeracion">Refrigeracion <i class="fa-solid fa-chevron-down "></i></p>
-                            <ul class="menu-vertical">
-                                <li><i><p  class="boton-categoria" id="Cooler">Cooler</p></i></li>
-                                <li><i><p class="boton-categoria" id="Liquida">Refrigeracion Liquida</p></i></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>Memorias <i class="fa-solid fa-chevron-down boton-categoria"></i></p>
-                            <ul class="menu-vertical">
-                                <li><i><p class="boton-categoria" id="RAM">RAM</p></i></li>
-                                <li><i><p class="boton-categoria" id="SSD">SSD</p></i></li>
-                                <li><i><p class="boton-categoria" id="HDD">HDD</p></i></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>Placas de Video <i class="fa-solid fa-chevron-down "></i></p>
-                            <ul class="menu-vertical">
-                                <li><p id="Radeon" class="boton-categoria">Radeon</p></li>
-                                <li><p id="Nvidia" class="boton-categoria">Nvidia</p></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p class="boton-categoria" id="Fuente">Fuente de Alimentacion</p>
-                        </li>
-                           <li>
-                            <p class="boton-categoria" id="Gabinetes">Gabinetes</p>
-                        </li>
-                        <li>
-                            <p id="Perisfericos">Perisfericos<i class="fa-solid fa-chevron-down"></i><p> 
-                            <ul class="menu-vertical">
-                                <li><i><p class="boton-categoria"  id="Sillas">Silas Gamer</p></i></li>
-                                <li><i><p class="boton-categoria"  id="Mouse">Mouse</p></i></li>
-                                <li><i><p class="boton-categoria"  id="Teclado">Teclado</p></i></li>
-                                <li><i><p class="boton-categoria"  id="Auriculares">Auriculares</p></i></li>
-                                <li><i><p class="boton-categoria"  id="Monitor">Monitor</p></i></li>
-                                <li><i><p class="boton-categoria"  id="Placa-Wifi">Placa Wifi</p></i></li>
-                            </ul>
-                        </li>
-                     
-                    </ul>
-                </nav>
+                <div class="desktop-product">
+                    <nav class="conteiner-objetos">
+                        <ul class="lista-objetos">
+                            <li>
+                                <p id="todos" class="boton-categoria">Todos los Productos</p>
+                            </li>
+                            <li>
+                                <p>Procesadores <i class="fa-solid fa-chevron-down" id="Procesadores"></i></p>
+                                <ul class="menu-vertical">
+                                    <li><i><p class="boton-categoria" id="Intel">Intel</p></i></li>
+                                    <li><i><p class="boton-categoria" id="AMD">Amd</p></i></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p id="Placa-Madre" class="boton-categoria">Placa Madre</p>
+                            </li>
+                            <li>
+                                <p  id="Refrigeracion">Refrigeracion <i class="fa-solid fa-chevron-down "></i></p>
+                                <ul class="menu-vertical">
+                                    <li><i><p  class="boton-categoria" id="Cooler">Cooler</p></i></li>
+                                    <li><i><p class="boton-categoria" id="Liquida">Refrigeracion Liquida</p></i></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Memorias <i class="fa-solid fa-chevron-down"></i></p>
+                                <ul class="menu-vertical">
+                                    <li><i><p class="boton-categoria" id="RAM">RAM</p></i></li>
+                                    <li><i><p class="boton-categoria" id="SSD">SSD</p></i></li>
+                                    <li><i><p class="boton-categoria" id="HDD">HDD</p></i></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Placas de Video <i class="fa-solid fa-chevron-down "></i></p>
+                                <ul class="menu-vertical">
+                                    <li><p id="Radeon" class="boton-categoria">Radeon</p></li>
+                                    <li><p id="Nvidia" class="boton-categoria">Nvidia</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="boton-categoria" id="Fuente">Fuente de Alimentacion</p>
+                            </li>
+                               <li>
+                                <p class="boton-categoria" id="Gabinetes">Gabinetes</p>
+                            </li>
+                            <li>
+                                <p id="Perisfericos">Perisfericos<i class="fa-solid fa-chevron-down"></i><p> 
+                                <ul class="menu-vertical">
+                                    <li><i><p class="boton-categoria"  id="Sillas">Silas Gamer</p></i></li>
+                                    <li><i><p class="boton-categoria"  id="Mouse">Mouse</p></i></li>
+                                    <li><i><p class="boton-categoria"  id="Teclado">Teclado</p></i></li>
+                                    <li><i><p class="boton-categoria"  id="Auriculares">Auriculares</p></i></li>
+                                    <li><i><p class="boton-categoria"  id="Monitor">Monitor</p></i></li>
+                                    <li><i><p class="boton-categoria"  id="Placa-Wifi">Placa Wifi</p></i></li>
+                                </ul>
+                            </li>
+                         
+                        </ul>
+                    </nav>
+    
+                </div>
+               
 
-            </div>
+                <div class="responsive-product">
+                        
+                    <nav class="conteiner-objetos">
+                        <ul class="lista-objetos">
+                            <li>
+                                <p id="todos" class="boton-categoria">Todos los Productos</p>
+                            </li>
+                            
+                            <li>
+                                <p>Categorias <i class="fa-solid fa-chevron-down"></i></p>
+                                <ul class="menu-vertical">
+                                    <li class="lista-objeto">
+                                        <p>Procesadores <i class="fa-solid fa-chevron-down" id="Procesadores"></i></p>
+                                        <ul class="menus-vertical">
+                                            <li><i><p class="boton-categoria" id="Intel">Intel</p></i></li>
+                                            <li><i><p class="boton-categoria" id="AMD">Amd</p></i></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p id="Placa-Madre" class="boton-categoria">Placa Madre</p>
+                                    </li>
+                                    <li class="lista-objeto">
+                                        <p  id="Refrigeracion">Refrigeracion <i class="fa-solid fa-chevron-down "></i></p>
+                                        <ul class="menus-vertical">
+                                            <li><i><p  class="boton-categoria" id="Cooler">Cooler</p></i></li>
+                                            <li><i><p class="boton-categoria" id="Liquida">Refrigeracion Liquida</p></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lista-objeto">
+                                        <p>Memorias <i class="fa-solid fa-chevron-down"></i></p>
+                                        <ul class="menus-vertical">
+                                            <li><i><p class="boton-categoria" id="RAM">RAM</p></i></li>
+                                            <li><i><p class="boton-categoria" id="SSD">SSD</p></i></li>
+                                            <li><i><p class="boton-categoria" id="HDD">HDD</p></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lista-objeto">
+                                        <p>Placas de Video <i class="fa-solid fa-chevron-down "></i></p>
+                                        <ul class="menus-vertical">
+                                            <li><p id="Radeon" class="boton-categoria">Radeon</p></li>
+                                            <li><p id="Nvidia" class="boton-categoria">Nvidia</p></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="boton-categoria" id="Fuente">Fuente de Alimentacion</p>
+                                    </li>
+                                    <li>
+                                        <p class="boton-categoria" id="Gabinetes">Gabinetes</p>
+                                    </li>
+                                    <li class="lista-objeto">
+                                        <p id="Perisfericos">Perisfericos<i class="fa-solid fa-chevron-down"></i><p> 
+                                        <ul class="menus-vertical">
+                                            <li><i><p class="boton-categoria"  id="Sillas">Silas Gamer</p></i></li>
+                                            <li><i><p class="boton-categoria"  id="Mouse">Mouse</p></i></li>
+                                            <li><i><p class="boton-categoria"  id="Teclado">Teclado</p></i></li>
+                                            <li><i><p class="boton-categoria"  id="Auriculares">Auriculares</p></i></li>
+                                            <li><i><p class="boton-categoria"  id="Monitor">Monitor</p></i></li>
+                                            <li><i><p class="boton-categoria"  id="Placa-Wifi">Placa Wifi</p></i></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>  
+                        </ul>
+                    </nav>
+                </div>
+    
             
 
             <div id="target">
                <!-- Relleno con js  -->
+            </div>    
         </div>
     </section>
 
@@ -179,7 +248,8 @@
         </div>
 
     </footer>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/98d99e43f4.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>

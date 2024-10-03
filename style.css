@@ -8,6 +8,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+.responsive-product{
+  display: none;
+}
+
 /* Navbar */
 .navbar{
     width: 100%;
@@ -20,9 +25,7 @@
     background-color: #fff;
     z-index: 2;
 }
-.product{
-  margin-right: 200px;
-}
+
 .product li {
    display: inline-block;
    margin: 30px;
@@ -181,6 +184,7 @@ font-size: 32px;
 
 .lista-objetos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
 }
@@ -202,6 +206,7 @@ font-size: 32px;
   left: 0;
   width: 200px;
   background-color: rgb(210, 209, 209);
+  
 }
 
 .lista-objetos li:hover .menu-vertical{
@@ -213,8 +218,7 @@ font-size: 32px;
     width: 100%;
     display:flex;
     flex-wrap: wrap;
-    gap: 25px;
-    
+    gap: 24px;
 }
 
 .card{
@@ -449,3 +453,141 @@ footer {
   footer ul li:nth-child(3) a:before {
     background: #0077b5;
   }
+
+
+  /* ! Menu responsive para Celulares */
+
+  @media only screen and (max-width: 660px) {
+
+    .cart{
+      max-width: 300px;
+    }
+    
+    .navbar, .carrusel{
+      display: none;
+    }
+    
+    .conteiner-target{
+      padding: 0;
+    }
+
+    #target{
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card{
+      margin: 20px;
+      width: 200px;
+      height: 350px;
+    }
+    .lista-objetos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+  }
+  
+  .lista-objetos li {
+      position: relative; 
+  }
+  
+  .menu-vertical {
+      position: absolute;
+      color: #fff;
+      max-width: 160px;
+      background-color: grey; 
+      z-index: 1;
+      display: none; 
+  }
+  
+  /* Mostrar el submenú al hacer hover o al hacer foco en un elemento dentro de li */
+  .lista-objetos li:hover .menu-vertical,
+  .lista-objetos li:focus-within .menu-vertical {
+      display: block; 
+  }
+  
+    .contenido-target {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contenido-target > h1 {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    .card div h2 {
+      font-size: 15px;
+    }
+
+    .card div p {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .button-target {
+      padding: 10px;
+      background-color: rgb(213, 188, 253);
+      border: none;
+      border-radius: 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .button-target i {
+      margin-right: 10px;
+      font-size: 12px;
+    }
+
+    footer {
+      font-size: 15px;
+    }
+
+    footer ul li a {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+}
+
+/* ! Menu responsive para tablet */
+
+@media only screen and (min-width: 661px) and (max-width: 1628px) {
+
+.menus-vertical{
+  display: none;
+
+}
+ .lista-objeto:hover .menus-vertical{
+  display: block;
+}
+.responsive-product{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.conteiner-objetos{
+  width: 90%;
+}
+.desktop-product{
+  display: none;
+  
+}
+.lista-objetos {
+    justify-content: space-around;
+    font-size: 14px;
+    
+}
+
+  #target{
+    justify-content: center;
+    align-items: center;
+  }
+}

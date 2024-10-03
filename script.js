@@ -1,192 +1,17 @@
 
 
 
-// ! Preentrega 2 = 
+// ! Preentrega Final =
 
-const productos = [
-    {
-        id: "Monitor-01",
-        titulo: "MONITOR SAMSUNG 24'' 75hz",
-        img: "./img/shopping.webp",
-        categoria: {
-            nombre: "Perisfericos",
-            id: "Monitor"
-        },
-        precio: "120.000",
-    },
-    {
-        id: "Gabinete-01",
-        titulo: "GABINETE SOLARMAX TG C/6 COOLER",
-        img: "./img/gabinete-solarmax-tg-c6-cooler-rgb-white-cm5920-0.jpg",
-        categoria: {
-            nombre: "Gabinetes",
-            id: "Gabinetes"
-        },
-        precio: "70.000",
-    },
-    {
-        id: "Procesador-01",
-        titulo: "PROCESADOR RYZEN 5 7600X C/VIDEO",
-        img: "./img/micro-amd-ryzen-5-7600x-cvideo-scooler-am5-0.jpg",
-        categoria: {
-            nombre: "Procesadores",
-            id: "AMD"
-        },
-        precio: "327.000",
-    },
-    {
-        id: "Memoria-RAM-01",
-        titulo: "MEMORIA 16GB DDR5 KINGSTON FURY RGB",
-        img: "./img/memoria-16gb-ddr5-5600-kingston-fury-beast-rgb-0.jpg",
-        categoria: {
-            nombre: "Memorias",
-            id: "RAM"
-        },
-        precio: "80.000",
-    },
-    {
-        id: "Fuente-01",
-        titulo: "FUENTE 700W EVGA 80 PLUS BRONCE",
-        img: "./img/fuente-700w-evga-br-80-bronze-0.jpg",
-        categoria: {
-            nombre: "Fuente",
-            id: "Fuente"
-        },
-        precio: "122.900",
-    },
-    {
 
-        id: "Placa-01",
-        titulo: "PLACA DE VIDEO RTX 4060TI GIGABYTE",
-        img: "./img/video-geforce-rtx-4060-ti-gigabyte-windforce-oc-8g-gddr6-0.jpg",
-        categoria: {
-            nombre: "Placa-Video",
-            id: "Nvidia"
-        },
-        precio: "617.400"
-    },
-    {
-        id: "Mouse-01",
-        titulo: "MOUSE LOGITECH G PRO X SUPERLIGHT WHITE",
-        img: "./img/mouse-logitech-g-pro-x-superlight-white-910005941-0.jpg",
-        categoria: {
-            nombre: "Perisfericos",
-            id: "Mouse"
-        },
-        precio: "123.200",
-    },
-    {
-        id: "Mother-01",
-        titulo: "MOTHER ASUS B650MA WIFI AM5",
-        img: "./img/mother-asus-prime-b650ma-wifi-ii-ddr5-am5-0.jpg",
-        categoria: {
-            nombre: "Placa-Madre",
-            id: "Placa-Madre"
-        },
-        precio: "216.000 ",
-    },
-    {
-        id: "Placa-Wifi-01",
-        titulo: "PLACA DE RED TP-LINK 1300MB",
-        img: "./img/placa-wifi-pcie-tplink-archer-t6e-ac1300mb-dual-band-0.jpg",
-        categoria: {
-            nombre: "Perisfericos",
-            id: "Placa-Wifi"
-        },
-        precio: "76.340 ",
-    },
-    {
-        id: "CoolerFan-01",
-        titulo: "COOLER FAN AEROCOOL RGB",
-        img: "./img/cooler-fan-aerocool-eclipse-12-rgb-para-gabinete-0.jpg",
-        categoria: {
-            nombre: "Refrigeracion",
-            id: "Cooler"
-        },
-        precio: "12.619 ",
-    },
-    {
-        id: "Memoria-SSD-01",
-        titulo: "MEMORIA SSD 1TB KINGSTON M.2",
-        img: "./img/hd-ssd-1tb-kingston-snvs-nv2-m2-nvme-gen4-3500mbs-2280-0.jpg",
-        categoria: {
-            nombre: "Memorias",
-            id: "SSD"
-        },
-        precio: "92.350",
-    },
-    {
-        id: "Teclado-01",
-        titulo: "TECLADO REDRAGON HORUS TKL WIRELESS",
-        img: "./img/compragamer_Imganen_general_37639_Teclado_Mecanico_Redragon_Horus_K621W_White_RGB_TKL_Low_Profile_Switch_Red_Wireless_1a510a9f-med.jpg",
-        categoria: {
-            nombre: "Perisfericos",
-            id: "Teclado"
-        },
-        precio: "73.456  ",
-    },
-    {
-        id: "Auricular-01",
-        titulo: "AURICULAR WIRELESS CON MICROFONO LOGITECH VIBE 100",
-        img: "./img/cooler-fan-aerocool-eclipse-12-rgb-para-gabinete-0.jpg",
-        categoria: {
-            nombre: "Perisfericos",
-            id: "Auriculares"
-        },
-        precio: "162.304  ",
-    },
-    {
-        id: "Silla-01",
-        titulo: "SILLA GAMER AK RACING GAMING CHAIR",
-        img: "./img/compragamer_Imganen_general_19144_Silla_Gamer_AK-Racing_Gaming_Chair_OCTANE_Red__Peso_MAX._150kg__17df5120-med.jpg",
-        categoria: {
-            nombre: "Perisfericos",
-            id: "Sillas"
-        },
-        precio: "435.654",
-    },
-    {
-        id: "Procesador-02",
-        titulo: "PROCESADOR INTEL CORE I5 10400F 4.3GHZ",
-        img: "./img/compragamer_Imganen_general_18900_Procesador_Intel_Core_i5_10400F_4.3GHz_Turbo_1200_Comet_Lake_e07a1d28-med.jpg",
-        categoria: {
-            nombre: "Procesadores",
-            id: "Intel"
-        },
-        precio: "152.342",
-    },
-    {
+fetch("./productos.json")
+.then((resp)=>  resp.json())
+.then( data =>{
+   productos = data
+   cargaDeProductos(productos)
+})
 
-        id: "Placa-02",
-        titulo: "PLACA DE VIDEO AMD RX 6600XT 8Gb GDDR6",
-        img: "./img/placa-de-video-amd-rx-6600xt-8gb-gddr61-18f0e0545824ff4b6e16345782237728-1024-1024.png",
-        categoria: {
-            nombre: "Placa-Video",
-            id: "Radeon"
-        },
-        precio: "580.150"
-    },
-    {
-        id: "CoolerLiquida-01",
-        titulo: " Cooler MasterLiquid ML240L Core ARGB White Water Cooler",
-        img: "./img/compragamer_Imganen_general_37843_Cooler_CPU_Cooler_Master_MasterLiquid_ML240L_Core_ARGB_White_Water_Cooler_5dd82d3b-grn.jpg",
-        categoria: {
-            nombre: "Refrigeracion",
-            id: "Liquida"
-        },
-        precio: "168.619 ",
-    },
-    {
-        id: "Memoria-HDD-01",
-        titulo: "Disco Rigido Seagate 1TB SkyHawk 256MB 5.4K RPM",
-        img: "./img/compragamer_Imganen_general_40373_Disco_Rigido_Seagate_1TB_SkyHawk_256MB_5.4K_RPM_8303511a-grn.jpg",
-        categoria: {
-            nombre: "Memorias",
-            id: "HDD"
-        },
-        precio: "56.330",
-    }
-]
+
 const contenedor = document.getElementById("target");
 const todosProducto = document.querySelector("#todosProductos");
 
@@ -214,8 +39,6 @@ function cargaDeProductos(productos) {
     });
     agregarAlCarrito();
 }
-
-cargaDeProductos(productos);
 
 const botonesCategoria = document.querySelectorAll(".boton-categoria");
 
@@ -255,11 +78,7 @@ const password = document.querySelector("#contraseña");
 
 function mostrarContraseña() {
     check.addEventListener("change", () => {
-        if (check.checked) {
-            password.type = "text";
-        } else {
-            password.type = "password";
-        }
+        check.checked ? password.type = "text" : password.type = "password"
     });
 }
 
@@ -298,6 +117,21 @@ function agregarAlCarrito() {
     const botonCarrito = document.querySelectorAll(".button-target");
     botonCarrito.forEach(boton => {
         boton.addEventListener("click", agregarCarrito);
+        boton.addEventListener("click", ()=>{
+            Toastify({
+                text: "Producto Agregado",
+                duration: 3000,
+                newWindow: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, rgb(210, 209, 209)  , rgb(213, 188, 253) ) ",
+                  margin:" 60px 40px"
+                },// Callback after click
+              }).showToast();
+        });
+       
     });
 }
 
@@ -311,6 +145,7 @@ function agregarCarrito(e) {
     } else {
         agregarProducto.cantidad = 1;
         productosEnCarrito.push(agregarProducto);
+
     }
 
     actualizarNumber();
@@ -378,9 +213,22 @@ function eliminarDelCarrito() {
     
     vaciarCarrito.forEach(boton => {
         boton.addEventListener("click", (e) => {
+            
             const idProducto = e.currentTarget.id;
             productosEnCarrito = productosEnCarrito.filter(producto => producto.id != idProducto);
-
+            Toastify({
+                text: "Producto Eliminado",
+                duration: 3000,
+                newWindow: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, rgb(210, 209, 209)  , rgb(213, 188, 253) ) ",
+                  margin:" 60px 40px"
+                },// Callback after click
+              }).showToast();
+            
             localStorage.setItem("productos-carrito-conteiner", JSON.stringify(productosEnCarrito));
             actualizarNumber();
             actualizarCarrito();
@@ -419,7 +267,14 @@ function reducirCarrito() {
 // Función de simulación de pago
 carritoPagado.addEventListener("click", () => {
     if (productosEnCarrito.length > 0) {
-        alert("Pago realizado con éxito. ¡Gracias por tu compra!");
+        const total = totalCarrito.innerText
+        Swal.fire({
+            title: "Pago realizado con éxito. ", 
+            text: `¡Gracias por tu compra de ${total}!  `,
+            icon: "success",
+            confirmButtonText: "Aceptar",
+            confirmButtonColor:"rgb(213, 188, 253)"
+          });
         productosEnCarrito = [];
         localStorage.removeItem("productos-carrito-conteiner");
 
@@ -429,3 +284,5 @@ carritoPagado.addEventListener("click", () => {
         alert("El carrito está vacío. Agrega productos antes de pagar.");
     }
 });
+
+
